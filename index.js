@@ -69,7 +69,10 @@ submit_btn.addEventListener('click',()=>{
     })
     if(selected==-1){
         var input = prompt("Do you really want to skip this current question?Type Y for proceed and N for answer this current quetion.");
-        if(input=='N'||input=='n')currentQ=currentQ-1
+        if(input=='N'||input=='n'){
+            if(currentQ>0)
+            currentQ=currentQ-1
+        }
         else if(input!='y'||input!='Y')
         alert("You have entered invalid choice.So we are proceeding you.")
     }
